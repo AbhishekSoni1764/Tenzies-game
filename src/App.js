@@ -36,9 +36,31 @@ function App() {
     }
   }, [dice])
 
+
+  // NUMBERS
+
+  // function newRoll() {
+  //   return {
+  //     value: Math.floor((Math.random() * 6) + 1),
+  //     isHeld: false,
+  //     id: nanoid(),
+  //   }
+  // }
+
+  // Icons Instead of Numbers
+
+
   function newRoll() {
+    const icons = [
+      "https://i.ibb.co/x6cg663/one.png",
+      "https://i.ibb.co/R0bcjWF/two-p.png",
+      "https://i.ibb.co/3c3PcR6/three-p.png",
+      "https://i.ibb.co/93k6np5/four-p.png",
+      "https://i.ibb.co/cFMJ5w0/five-p.png",
+      "https://i.ibb.co/0jDsgLN/six-p.png"
+    ]
     return {
-      value: Math.floor((Math.random() * 6) + 1),
+      value: icons[Math.floor(Math.random() * icons.length)],
       isHeld: false,
       id: nanoid(),
     }
