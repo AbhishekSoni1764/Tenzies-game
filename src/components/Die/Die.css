@@ -1,0 +1,28 @@
+.card {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 1px 3px 5px 0px #0000008c;
+    cursor: pointer;
+}
+.card-green {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #04f665;
+    box-shadow: 1px 3px 5px 0px #0000008c;
+    cursor: pointer;
+}
+
+img {
+    height: 42px;
+    width: 42px;
+    border-radius: 5px;
+}
