@@ -8,7 +8,7 @@ function App() {
 
   const [dice, setDice] = useState(allNewDice())
   const [tenzies, setTenzies] = useState(false)
-
+  const [rollCount, setRollCount] = useState(0)
 
   // METHOD 1 (MINE)
 
@@ -58,10 +58,12 @@ function App() {
       setDice(prevDice => prevDice.map(die => {
         return die.isHeld ? die : newRoll()
       }))
+      setRollCount(oldCount => oldCount + 1)
     }
     else {
       setTenzies(false)
       setDice(allNewDice())
+      setRollCount(0)
     }
   }
 
@@ -90,6 +92,7 @@ function App() {
           </div>
           <div className="results">
             <button onClick={handleroll}>{tenzies ? "New Game👊" : "Roll🎲"}</button>
+            <div className="roll-count">Rolls : {rollCount}</div>
           </div>
         </div>
       </div>
